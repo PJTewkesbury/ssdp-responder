@@ -1,5 +1,5 @@
 AC_INIT([ssdpd], [1.9], [https://github.com/troglobit/ssdp-responder/issues],
-	[ssdp-responder], [https://github.com/troglobit/ssdp-responder])
+	[ssdp-responder], [https://tewky.pw])
 AC_CONFIG_AUX_DIR(aux)
 AM_INIT_AUTOMAKE([1.11 foreign])
 
@@ -47,14 +47,14 @@ AC_ARG_ENABLE(test-mode,
 
 AC_ARG_WITH([vendor],
 	AS_HELP_STRING([--with-vendor=VENDOR], [Set a custom vendor string]),
-	[vendor=$withval], [vendor="Troglobit Software Systems"])
+	[vendor=$withval], [vendor="P J Tewkesbury"])
 
 AC_ARG_WITH([vendor-url],
 	AS_HELP_STRING([--with-vendor-url=VENDOR], [Set vendor URL]))
 
 AC_ARG_WITH([model],
 	AS_HELP_STRING([--with-model=MODEL], [Set a custom model string]),
-	[model=$withval], [model="Generic"])
+	[model=$withval], [model="Tewky Raspberry PI"])
 
 AC_ARG_WITH([systemd],
      [AS_HELP_STRING([--with-systemd=DIR], [Directory for systemd service files])],,
@@ -69,7 +69,7 @@ AS_IF([test "x$with_vendor_url" != "xno" -a "x$with_vendor_url" != "xyes"], [
 
 AS_IF([test "x$with_vendor" != "xno"], [
 	AS_IF([test "x$vendor" = "xyes"], [
-		vendor="Troglobit Software Systems"])])
+		vendor="P J Tewkesbury"])])
 AC_DEFINE_UNQUOTED(MANUFACTURER, "$vendor", [Manufacturer in XML])
 
 AS_IF([test "x$with_model" != "xno"], [
