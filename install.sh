@@ -1,7 +1,8 @@
 sudo mkdir /Apps
-sudo cd /Apps
+cd /Apps
 sudo git clone https://github.com/PJTewkesbury/ssdp-responder.git
 cd ssdp-responder
+sudo apt install automake autoconf
 ./autogen.sh
 ./configure --prefix=/usr --sysconfdir=/etc --runstatedir=/var/run LDFLAGS="-static"
 make clean
